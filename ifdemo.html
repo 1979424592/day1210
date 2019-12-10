@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+            <input type="radio" value="Curry" name="star" v-model="name"/>库里
+            <input type="radio" value="Thompson" name="star" v-model="name"/>汤普森
+            <input type="radio" value="James" name="star" v-model="name"/>詹姆斯
+            <img v-if="name=='Curry'" style="width:200px;height:250px" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1575966634&di=e89924f63c330624ad8eeb17669cefca&src=http://www.wfcsgj.com/d/file/tiyu/lanqiu/2018-03-14/e5cd5674c21e814195e6c5eadd6bbb27.jpg">
+            <img v-else-if="name=='Thompson'" style="width:200px;height:250px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576572514&di=484561528b54a3d538ae0611660a29b7&imgtype=jpg&er=1&src=http%3A%2F%2Fimg1.gtimg.com%2Fchinanba%2Fpics%2Fhv1%2F142%2F59%2F2264%2F147231787.jpg"/>
+            <img v-else-if="name=='James'" style="width:300px;height:250px" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=249001922,130519406&fm=26&gp=0.jpg"/>
+            <img v-else style="width:200px;height:250px" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=928753344,464307874&fm=26&gp=0.jpg"/>
+
+        </div>
+        <script>
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    show:'false',
+                    name:""
+                }
+            });
+        </script>
+</body>
+</html>
